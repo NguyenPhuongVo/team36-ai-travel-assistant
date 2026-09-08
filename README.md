@@ -45,10 +45,9 @@ The team has prepared the following files, as listed in our master document. Ava
 | --- | --- |
 | UX Brief v2 | User research and accessibility requirements, updated after the client meeting |
 | Technical Architecture and Technology Stack | Proposed architecture, AI services, external APIs, dependencies, and technical risks |
-| Meeting-minutes template | Reusable template for recording team and client meetings |
 | Client Requirement Analysis Document | Initial requirements analysis, refined following client feedback |
 | [YAF Technical Review – Sprint 1 Week 2](docs/YAF_technical_review.md) | Technical feasibility, user flow, constraints, risks, and external dependencies |
 | User interaction flow document | Sequence diagram, example chatbot interaction, and accessibility considerations |
 | Reviewing existing chatbot implementation | Review of YAF's chatbot, AI API, database, limitations, and potential improvements |
 | Analysis of initial client requirements | Updated detailed MVP requirements for PM review before submission |
-| IMG_6617.jpeg | Initial low-fidelity chatbot interaction wireframes |
+| Chatbot interaction wireframe | Initial low-fidelity chatbot interaction wireframes |
