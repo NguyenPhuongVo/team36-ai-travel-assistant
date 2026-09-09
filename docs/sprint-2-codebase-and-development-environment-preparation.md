@@ -106,25 +106,26 @@ The following preparation tasks have been completed on the branch:
 `feature/team-b-travel-services-integration`
 
 - Created and switched to the team feature branch to keep development separate from the shared `main` branch.
+ ![Team Branch](../images/branch.png)
 - Reviewed the repository areas relevant to Sprint 2 chatbot improvements.
 - Reviewed the existing AI chat flow, including the handler, orchestrator, provider router, and provider implementations.
 - Reviewed the airport, airline, equipment, database, authentication, configuration, and testing components.
 - Installed and configured Docker Desktop for local development.
- ![PostgreSQL container running in Docker Desktop](images/docker-postgres.png)
+ ![PostgreSQL container running in Docker Desktop](../images/docker-postgres.png)
 - Started PostgreSQL using Docker and confirmed that it is available to the backend.
 - Created the local `.env` configuration based on `.env.example`.
 - Configured local development settings for authentication, airport data, and the Mock AI provider.
 - Downloaded and verified the Go project dependencies.
 - Started the YAF backend successfully using `go run ./cmd/api` and confirmed it is listening on port `8080`.
-![Backend running successfully](images/backend-running.png)
+![Backend running successfully](../images/backend-running.png)
 *Figure 1: YAF backend running locally on port 8080.*
-![YAF API Demo Explorer](images/api-demo-explorer.png)
+![YAF API Demo Explorer](../images/api-demo-explorer.png)
 *Figure 2: YAF API Demo Explorer running locally.*
-![YAF Admin Dashboard](images/yaf-admin-dashboard.png)
+![YAF Admin Dashboard](../images/yaf-admin-dashboard.png)
 *Figure 3: YAF admin dashboard running locally.*
 - Confirmed that the application reports the expected local providers during startup.
 - Checked the application health endpoint using `curl -i http://localhost:8080/health` and confirmed that it returned `HTTP/1.1 200 OK`.
-![Health endpoint returning HTTP 200 OK](images/health-endpoint.png)
+![Health endpoint returning HTTP 200 OK](../images/health-endpoint.png)
 *Figure 4: Health endpoint returning HTTP 200 OK.*
 - Verified that the existing chatbot endpoint accepts requests using the Mock provider.
 - Recorded the remaining Sprint 2 dependencies, including real AI credentials, external hotel or booking access, retrieval integration, and client confirmation of provider requirements.
