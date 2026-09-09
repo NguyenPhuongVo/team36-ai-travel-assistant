@@ -51,3 +51,4 @@ The team has prepared the following files, as listed in our master document. Ava
 | Reviewing existing chatbot implementation | Review of YAF's chatbot, AI API, database, limitations, and potential improvements |
 | Analysis of initial client requirements | Updated detailed MVP requirements for PM review before submission |
 | Chatbot interaction wireframe | Initial low-fidelity chatbot interaction wireframes |
+| [Sprint 2 Codebase and Development Environment Preparation](docs/sprint-2-codebase-and-development-environment-preparation.md) | Repository review, team branch workflow, local environment setup, dependencies, and development readiness |
