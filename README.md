@@ -44,11 +44,16 @@ The team has prepared the following files, as listed in our master document. Ava
 | File / document | Summary |
 | --- | --- |
 | UX Brief v2 | User research and accessibility requirements, updated after the client meeting |
-| Technical Architecture and Technology Stack | Proposed architecture, AI services, external APIs, dependencies, and technical risks |
+| [Technical Architecture and Technology Stack](docs/Technical%20Architecture%20and%20Technology%20Stack.pdf) | Proposed architecture, AI services, external APIs, dependencies, and technical risks |
 | Client Requirement Analysis Document | Initial requirements analysis, refined following client feedback |
 | [YAF Technical Review – Sprint 1 Week 2](docs/YAF_technical_review.md) | Technical feasibility, user flow, constraints, risks, and external dependencies |
 | User interaction flow document | Sequence diagram, example chatbot interaction, and accessibility considerations |
-| Reviewing existing chatbot implementation | Review of YAF's chatbot, AI API, database, limitations, and potential improvements |
+| [Reviewing existing chatbot implementation](docs/Reviewing%20existing%20chatbot%20implementation.pdf) | Review of YAF's chatbot, AI API, database, limitations, and potential improvements |
 | Analysis of initial client requirements | Updated detailed MVP requirements for PM review before submission |
 | Chatbot interaction wireframe | Initial low-fidelity chatbot interaction wireframes |
 | [Sprint 2 Codebase and Development Environment Preparation](docs/sprint-2-codebase-and-development-environment-preparation.md) | Repository review, team branch workflow, local environment setup, dependencies, and development readiness |
+| [User Stories and Requirements](docs/User-stories-and-requirements.md) | Prioritised user stories, acceptance criteria, MVP scope, and future improvements |
+| [Sprint 2 Technical Implementation Approach](docs/Sprint%202%20Technical%20Implementation%20Approach.pdf) | Proposed technical approach for Sprint 2 development and hotel or booking API integration |
+| Playback 1 Presentation — [PowerPoint](docs/36-Playback1.pptx) / [PDF](docs/36-Playback1.pdf) | Sprint 1 achievements, team contributions, blockers, and next steps |
+| [Hotel/Booking Provider Preparation](docs/Hotel-provider.md) | Provider status, hotel data fields, local fixture testing, and outstanding API access requirements |
+
