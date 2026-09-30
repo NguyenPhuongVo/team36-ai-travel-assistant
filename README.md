@@ -56,4 +56,5 @@ The team has prepared the following files, as listed in our master document. Ava
 | [Sprint 2 Technical Implementation Approach](docs/Sprint%202%20Technical%20Implementation%20Approach.pdf) | Proposed technical approach for Sprint 2 development and hotel or booking API integration |
 | Playback 1 Presentation — [PowerPoint](docs/36-Playback1.pptx) / [PDF](docs/36-Playback1.pdf) | Sprint 1 achievements, team contributions, blockers, and next steps |
 | [Hotel/Booking Provider Preparation](docs/Hotel-provider.md) | Provider status, hotel data fields, local fixture testing, and outstanding API access requirements |
+| [Hotel Response Matching and Structured Chatbot Response](docs/response-matching.md) | Matching logic, response contract, reported test results, and 12 representative requests with fields for recording responses |
 
