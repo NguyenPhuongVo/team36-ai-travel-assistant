@@ -29,9 +29,10 @@ This illustrative example shows the response fields, not a captured test respons
   "hotels": []
 }
 ```
-Responses containing synthetic hotel data identify it through `synthetic` and the relevant `warnings`.
+Responses containing synthetic hotel data identify it through synthetic and the relevant warnings.
 
 ### Hotel Card Information
+
 The `hotels` field contains:
 - Hotel name, airport, and location.
 - Distance from the airport.
@@ -54,7 +55,6 @@ The `hotels` field contains:
 This mapping documents the frontend contract; it does not by itself confirm that each field has been rendered and tested in SwiftUI.
 
 ## Matching Logic
-
 
 - `requestedFeatureLabel`: Converts the user's wording into a readable accessibility label.
 - `hotelMatchesQuery`: For a recognised feature, checks whether the hotel's corresponding accessibility field has a `confirmed` evidence status.
@@ -95,18 +95,16 @@ This example uses fictional hotel data. “Confirmed” describes the evidence s
 
 ## Representative Query Tests
 
-
-The table combines earlier reported results with the additional proposed queries. Earlier results for differently worded queries are identified in the result column; they do not establish a pass for the exact new wording. No tests were rerun while consolidating this document. The query set and expected outcomes still need client agreement.
-
-**Tested by / date:** To record.  
-**Backend branch / commit and fixture version:** To record.  
-**AI provider:** Pinecone Assistant ? **Fallback:** Mock ? **Hotel data:** Local synthetic fixture.  
-**Airport test data:** FNC ? **Hotel test codes:** SYD, FNC, RMO, HKG.
+The table records chatbot test questions, expected behaviour, actual responses, and results. The questions and expected answers still need client review.
+- **Tested by / date:** To record.
+- **AI provider:** Pinecone Assistant
+- **Fallback provider:** Mock
+- **Hotel data:** Local synthetic fixture
+- **Airport test data:** FNC
+- **Hotel test codes:** SYD, FNC, RMO, HKG
 
 ### Running and Recording Tests
-
-
-Use this Git Bash command with the query from the table. For Q11, replace the JSON body with `{}`. Q13 requires a controlled provider-failure scenario; a normal query alone does not test fallback.
+Use the Git Bash command below for each question in the table. For Q11, send {} as the request body. For Q13, make Pinecone unavailable and check that the chatbot switches to Mock.
 
 ```bash
 curl -i -X POST http://localhost:8080/api/ai/chat \
@@ -114,16 +112,11 @@ curl -i -X POST http://localhost:8080/api/ai/chat \
   -d '{"content":"What accessibility services are available at FNC airport?"}'
 ```
 
-Record the actual response, HTTP status, and any evidence links in the result column. Check successful responses against the response contract above, including synthetic-data notices and the returned provider. Check error responses against their expected validation behaviour.
-
-Use **Pass**, **Partial**, or **Fail** after checking the result. **Pending** means the exact query's result still needs to be recorded.
-
 ### Results
-
 
 | ID | Query or scenario | Expected behaviour | Recorded result / evidence | Status |
 | --- | --- | --- | --- | --- |
-| Q01 | What accessibility services are available at FNC airport? | List services supported by the FNC source data; explain missing or unverified information. | Pinecone reported no relevant information in the uploaded documents. All expected response fields were present; no airport services were returned. Latency: 3244 ms. HTTP status not captured. See the response below. | Partial — missing-information handling observed; expected airport content not returned |
+| Q01 | What accessibility services are available at FNC airport? | List services supported by the FNC source data; explain missing or unverified information. | Returned ambulift, reduced-mobility assistance, immigration and customs assistance, lifts, accessible toilets, parking, and transport options. Pinecone, 5019 ms; expected response fields present. HTTP status not captured. | Partial — services returned; source verification pending |
 | Q02 | Does FNC airport have accessible toilets? | Answer using FNC source evidence; explain when information is missing. | Returned “Yes, Madeira Airport (FNC) has accessible toilets.” via Pinecone in 5576 ms. Expected fields present; no source evidence included in the response. | Partial — answer returned; source verification pending |
 | Q04 | Find an accessible hotel | Ask for missing location and accessibility needs, and wait for the user's response. | Asked for an airport code (SYD, MEL, RMO, FNC, or HKG). Pinecone, 3479 ms; `hotels: []`. Follow-up clarification of accessibility requirements not recorded. | Partial |
 | Q05 | Which hotel near SYD airport has a confirmed accessible toilet? | Return the available matching hotel based on confirmed fixture evidence and identify synthetic data. | Returned Mascot Step-Free Hotel, whose fixture toilet status is `confirmed` and availability is `true`. Pinecone, 2447 ms; `synthetic: true` with a warning. All three SYD hotels remain in `hotels`. | Pass — answer matching and synthetic-data marking |
@@ -141,8 +134,8 @@ Use **Pass**, **Partial**, or **Fail** after checking the result. **Pending** me
 {
   "provider": "pinecone",
   "model": "gpt-4o-2024-11-20",
-  "content": "I'm sorry, but I couldn't find any relevant information in the uploaded documents about accessibility services at FNC airport. Please provide more details or upload the correct files so I can assist you.",
-  "latencyMs": 3244,
+  "content": "The following accessibility services are available at Madeira Airport (FNC):\n\n- Ambulift assistance\n- Barrier-free assistance for passengers with reduced mobility\n- Immigration and customs assistance\n- Lifts between floors\n- Accessible toilets\n- Accessible parking\n- Accessible transport options, including buses, taxis, or wheelchair-adapted transfers.",
+  "latencyMs": 5019,
   "synthetic": false,
   "warnings": [],
   "hotels": []
@@ -225,8 +218,8 @@ Shows: The answer matches the named hotel's `available: false` value in the synt
 ## Remaining Follow-up
 - Q13: Confirm Pinecone was tried first and failed before Mock took over. Save the logs and HTTP status.
 - Record any missing test results and check airport information against the YAF materials.
-- Q01: Check that the chatbot can access the FNC data, then test again using `curl -i`.
-- Q02: Check whether YAF confirms accessible toilets at FNC and why Q01 could not find airport information.
+- Q01: Check the returned services against the YAF source material and capture the HTTP status using `curl -i`.
+- Q02: Check whether the YAF source confirms accessible toilets at FNC.
 - Q05, Q07, and Q12: Save the original JSON responses and HTTP statuses. Check that hotel cards clearly show which hotels match, which have unconfirmed features, and which are unavailable.
 - Q04: Reply to the chatbot’s question and check that it uses the user’s location and accessibility needs.
 - Review the test questions and expected answers with the client.
