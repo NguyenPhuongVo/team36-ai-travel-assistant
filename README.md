@@ -57,4 +57,8 @@ The team has prepared the following files, as listed in our master document. Ava
 | Playback 1 Presentation — [PowerPoint](docs/36-Playback1.pptx) / [PDF](docs/36-Playback1.pdf) | Sprint 1 achievements, team contributions, blockers, and next steps |
 | [Hotel/Booking Provider Preparation](docs/Hotel-provider.md) | Provider status, hotel data fields, local fixture testing, and outstanding API access requirements |
 | [Hotel Response Matching and Structured Chatbot Response](docs/response-matching.md) | Matching logic, response contract, reported test results, and 12 representative requests with fields for recording responses |
+| [AI Testing Requirements](docs/AI%20testing%20requirements.pdf) | Requirements for testing the YAF chatbot and evaluating its responses |
+| [AI Provider Connection Verification](docs/AI%20Provider%20Connection%20Verification.pdf) | Documentation of AI provider connection verification |
+| [AI Provider Connection Verification — Pinecone Version](docs/AI%20Provider%20Connection%20Verification%20-%20Pinecone%20Version.pdf) | Documentation of Pinecone provider connection verification |
+| [YAF Chatbot Prompt Evaluation](docs/prompt_evaluation.md) | Comparison of prompts A–D, hotel, airport, and flight test results, response evidence, and recommended improvements |
 
