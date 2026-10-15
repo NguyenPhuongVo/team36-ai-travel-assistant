@@ -61,4 +61,5 @@ The team has prepared the following files, as listed in our master document. Ava
 | [AI Provider Connection Verification](docs/AI%20Provider%20Connection%20Verification.pdf) | Documentation of AI provider connection verification |
 | [AI Provider Connection Verification — Pinecone Version](docs/AI%20Provider%20Connection%20Verification%20-%20Pinecone%20Version.pdf) | Documentation of Pinecone provider connection verification |
 | [YAF Chatbot Prompt Evaluation](docs/prompt_evaluation.md) | Comparison of prompts A–D, hotel, airport, and flight test results, response evidence, and recommended improvements |
+| [YAF AI Retrieval and Response Quality Improvements](docs/ai-retrieval-response-quality.md) | Fallback handling, keyword reranking, hotel filtering and sorting, and the assistant’s remaining limitations |
 
