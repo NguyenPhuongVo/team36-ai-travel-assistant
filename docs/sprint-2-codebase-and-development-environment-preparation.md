@@ -55,7 +55,7 @@ Open a PR targeting feature/team-b-travel-services-integration
    ↓
 Team review and checks
    ↓
-Merge into feature/team-b-travel-services-integration
+Merge into swift_application
    ↓
 Team tests everything together
    ↓

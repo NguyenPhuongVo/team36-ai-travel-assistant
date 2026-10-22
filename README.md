@@ -43,7 +43,7 @@ The team has prepared the following files, as listed in our master document. Ava
 
 | File / document | Summary |
 | --- | --- |
-| UX Brief v2 | User research and accessibility requirements, updated after the client meeting |
+| [UX Brief v2](docs/UX%20Brief%20v2.md) | User personas, accessibility needs, usability barriers, and proposed travel-assistant features |
 | [Technical Architecture and Technology Stack](docs/Technical%20Architecture%20and%20Technology%20Stack.pdf) | Proposed architecture, AI services, external APIs, dependencies, and technical risks |
 | Client Requirement Analysis Document | Initial requirements analysis, refined following client feedback |
 | [YAF Technical Review – Sprint 1 Week 2](docs/YAF_technical_review.md) | Technical feasibility, user flow, constraints, risks, and external dependencies |
@@ -62,4 +62,18 @@ The team has prepared the following files, as listed in our master document. Ava
 | [AI Provider Connection Verification — Pinecone Version](docs/AI%20Provider%20Connection%20Verification%20-%20Pinecone%20Version.pdf) | Documentation of Pinecone provider connection verification |
 | [YAF Chatbot Prompt Evaluation](docs/prompt_evaluation.md) | Comparison of prompts A–D, hotel, airport, and flight test results, response evidence, and recommended improvements |
 | [YAF AI Retrieval and Response Quality Improvements](docs/ai-retrieval-response-quality.md) | Fallback handling, keyword reranking, hotel filtering and sorting, and the assistant’s remaining limitations |
+| [Hotel Implementation Guidance](docs/Hotel%20Implementation%20guidance-Team36.md) | Hotel-card layout, interaction requirements, accessibility considerations, and design decisions to confirm |
+| [Failure States](docs/Failure%20states-team%2036.md) | Proposed chatbot responses and accessibility considerations for missing information, errors, and unsupported requests |
+| [Voice Input: Test Log and Known Limitations](docs/Voice%20Input-Test%20Log%20and%20Known%20Limitations.md) | Voice-input test checklist, accessibility checks, known limitations, and suggested refinements |
+| [Sprint 2 Playback Presentation](docs/Playback%20Sprint%202.pdf) | Sprint 2 playback presentation |
 
+## Design and demonstration files
+
+| File / resource | Summary |
+| --- | --- |
+| [Team 36 Sprint Design](figma/Team-36-Sprint.fig) | Figma design file for the team prototype |
+| [Updated Design](images/updated-design.png) | Updated interface design image |
+| [Voice Prototype](images/vids/Voice-Prototype.mp4) | Voice prototype demonstration video |
+| [Prototype Demonstration](images/vids/Prototype_working.mp4) | Prototype demonstration recording |
+| App recordings, 26 September 2026: [iPhone](images/vids/app_iphone_26-09-26.mp4) / [App](images/vids/app_26-09-26.mov) | App prototype recordings |
+| [Supporting Screenshots](images/) | Screenshots of local setup, backend operation, health checks, and test results |
