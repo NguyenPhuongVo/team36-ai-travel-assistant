@@ -1,4 +1,4 @@
-# Team36 Accessible Accommodation Chat App: Project Documentation
+#Frontend Documentation
 
 A SwiftUI iOS app, "Chat with The Expert", that helps people with accessibility needs find suitable accommodation through a conversational interface with voice input.
 
